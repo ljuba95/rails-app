@@ -1,0 +1,5 @@
+Yo <%= @user.name %>,
+
+Welcome to Hell! Click on the link below to activate your sheet:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

@@ -1,0 +1,10 @@
+<h1>Hell</h1>
+
+<p>Yo <%= @user.name %>,</p>
+
+<p>
+Welcome to Hell! Click on the link below to activate your sheet:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
