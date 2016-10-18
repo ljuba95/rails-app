@@ -1,6 +1,6 @@
 <% provide(:title, "Home") %>
 <% if logged_in? %>
-  <% data = current_user.followers.pluck(:name)%>
+  <% data = current_user.following.pluck(:name)%>
   <script type="text/javascript">
     var data = <%=raw data.to_json%>;
     
