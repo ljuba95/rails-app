@@ -1,0 +1,15 @@
+one:
+  follower: milos
+  followed: lana
+
+two:
+  follower: milos
+  followed: malory
+
+three:
+  follower: lana
+  followed: milos
+
+four:
+  follower: retard
+  followed: milos
