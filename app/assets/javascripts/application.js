@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require jquery.atwho
+$(function(){
+	$('#micropost_content').atwho({at:"@",'data':data});
+});
