@@ -25,4 +25,19 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
+
+  #api
+  scope '/api' do
+    get '/' => 'api#index'
+    scope '/users' do
+      get '/' => 'api#showall'
+      scope '/:id' do
+        get '/' => 'api#show'
+        get '/posts' => 'api#posts'
+        get '/followers' => 'api#followers'
+        get '/following' => 'api#following'
+      end
+      
+    end
+  end
 end
